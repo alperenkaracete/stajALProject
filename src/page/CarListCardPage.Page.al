@@ -3,6 +3,7 @@ page 50121 "CarListCardPage"
     PageType = Card;
     UsageCategory = None;
     SourceTable = CarList;
+    Caption = 'Car Card Page';
 
     layout
     {

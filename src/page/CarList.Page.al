@@ -3,9 +3,10 @@ page 50122 "CarList"
     PageType = List;
     ApplicationArea = All;
     UsageCategory = Lists;
-    SourceTable = CarPage;
+    SourceTable = CarList;
     Editable = false;
-    CardPageId = "CarCardPage";
+    CardPageId = "CarListCardPage";
+    Caption = 'Arac Listesi';
 
     layout
     {

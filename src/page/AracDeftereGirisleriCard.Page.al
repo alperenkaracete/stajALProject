@@ -3,6 +3,7 @@ page 50126 "AracDeftereGirisleriCard"
     PageType = Card;
     UsageCategory = None;
     SourceTable = "Arac Deftere Girisleri";
+    Caption = 'Arac Deftere Giris Kart Page';
 
     layout
     {
@@ -25,7 +26,7 @@ page 50126 "AracDeftereGirisleriCard"
                     ApplicationArea = All;
 
                 }
-                field("Giriş Türü"; "Giriş Türü")
+                field("Giriş Türü"; "Giris Turu")
                 {
                     ApplicationArea = All;
 
