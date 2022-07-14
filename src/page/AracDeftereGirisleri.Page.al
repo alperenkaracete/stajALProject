@@ -5,6 +5,7 @@ page 50127 "Arac Deftere Girisleri"
     UsageCategory = Lists;
     SourceTable = "Arac Deftere Girisleri";
     CardPageId = "AracDeftereGirisleriCard";
+    Caption = 'Arac Deftere Giris';
 
     layout
     {
@@ -15,6 +16,7 @@ page 50127 "Arac Deftere Girisleri"
                 field("Araç No"; "Araç No")
                 {
                     ApplicationArea = All;
+                    TableRelation = CarList;
 
                 }
                 field("Deftere Nakil Tarihi"; "Deftere Nakil Tarihi")
@@ -27,7 +29,7 @@ page 50127 "Arac Deftere Girisleri"
                     ApplicationArea = All;
 
                 }
-                field("Giriş Türü"; "Giriş Türü")
+                field("Giriş Turu"; "Giris Turu")
                 {
                     ApplicationArea = All;
 
@@ -62,6 +64,7 @@ page 50127 "Arac Deftere Girisleri"
                     ApplicationArea = All;
 
                 }
+
                 field("Pozitif"; "Pozitif")
                 {
                     ApplicationArea = All;
@@ -80,16 +83,21 @@ page 50127 "Arac Deftere Girisleri"
                 field("Arac Aciklamasi"; "Arac Aciklamasi")
                 {
                     ApplicationArea = All;
+                    ShowCaption = true;
+
 
                 }
                 field("Giris No"; "Giris No")
                 {
                     ApplicationArea = All;
-
+                    ShowMandatory = true;
                 }
             }
+
         }
+
     }
+
 
     actions
     {
@@ -108,5 +116,5 @@ page 50127 "Arac Deftere Girisleri"
     }
 
     var
-        myInt: Integer;
+
 }
