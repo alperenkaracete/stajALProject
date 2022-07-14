@@ -3,10 +3,11 @@ page 50105 "HomePage"
     PageType = List;
     ApplicationArea = All;
     UsageCategory = Lists;
-    SourceTable = CarPage;
-    Description = 'HomePage';
+    SourceTable = CarList;
+    Description = 'Anasayfa';
     Editable = true;
-    CardPageId = CarCardPage;
+    CardPageId = CarListCardPage;
+    Caption = 'Anasayfa';
 
     layout
     {
