@@ -1,4 +1,4 @@
-enum 50121 "KaynakTuru"
+enum 50121 "Kaynak Turu"
 {
     Extensible = true;
 

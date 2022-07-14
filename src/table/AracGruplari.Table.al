@@ -10,11 +10,15 @@ table 50123 "Arac Gruplari"
         field(1; "Kod"; Code[20])
         {
             DataClassification = CustomerContent;
+            Description = 'Arac Kodu';
+            Caption = 'Kod';
 
         }
         field(2; "Aciklama"; Text[20])
         {
             DataClassification = CustomerContent;
+            Description = 'Arac Aciklamasi';
+            Caption = 'Aciklama';
 
         }
     }

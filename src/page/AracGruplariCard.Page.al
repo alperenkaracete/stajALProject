@@ -3,7 +3,8 @@ page 50125 "AracGruplariCard"
     PageType = Card;
     UsageCategory = None;
     SourceTable = "Arac Gruplari";
-    
+    Caption = 'Araç Karti';
+
 
     layout
     {
