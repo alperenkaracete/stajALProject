@@ -1,8 +1,8 @@
-page 50121 "CarCardPage"
+page 50121 "CarListCardPage"
 {
     PageType = Card;
     UsageCategory = None;
-    SourceTable = CarPage;
+    SourceTable = CarList;
 
     layout
     {
