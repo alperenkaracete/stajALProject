@@ -2,12 +2,12 @@ table 50121 "CarList"
 {
     DataClassification = CustomerContent;
     Description = 'CarPage';
-    LookupPageId = "CarCardPage";
-    DrillDownPageId = "CarCardPage";
+    LookupPageId = "CarListCardPage";
+    DrillDownPageId = "CarListCardPage";
 
     fields
     {
-        field(1; "No."; Integer)
+        field(1; "No."; Text[20])
         {
             DataClassification = CustomerContent;
             Description = 'Araç No';
@@ -46,26 +46,30 @@ table 50121 "CarList"
         }
         field(6; "Stok"; Integer)
         {
-            DataClassification = CustomerContent;
             Editable = false;
             Description = 'Stok Ürün';
             Caption = 'Stok Ürün';
+            FieldClass = FlowField;
+            CalcFormula = sum("Arac Deftere Girisleri".Miktar where("Araç No" = field("No.")));
 
         }
         field(7; "Net Degisim"; Integer)
         {
-            DataClassification = CustomerContent;
             Editable = false;
             Description = 'Net Ürün Degisimi';
             Caption = 'Net Ürün Degisimi';
+            //FieldClass = FlowField;
+            //CalcFormula = sum("Arac Deftere Girisleri".Miktar where("Araç No" = field("No."), Miktar = filter(0 .. 999)));
+
 
         }
         field(8; "Satinalma Miktari"; Integer)
         {
-            DataClassification = CustomerContent;
             Editable = false;
             Description = 'Satin Alinan Miktar';
             Caption = 'Satin Alinan Miktar';
+            FieldClass = FlowField;
+            CalcFormula = sum("Arac Deftere Girisleri".Miktar where("Araç No" = field("No."), Miktar = filter(0 .. 999)));
 
         }
     }
