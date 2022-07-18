@@ -11,14 +11,16 @@ page 50123 "Vehicle Groups"
         {
             repeater("Vehicle Groups")
             {
-                field("Code"; "Code")
+                field("Code"; Rec."Code")
                 {
                     ApplicationArea = All;
+                    ToolTip = 'Specifies code of vehicle.';
 
                 }
-                field("Description"; "Description")
+                field("Description"; Rec."Description")
                 {
                     ApplicationArea = All;
+                    ToolTip = 'Specifies description of vehicle.';
 
                 }
             }
@@ -32,6 +34,7 @@ page 50123 "Vehicle Groups"
             action(ActionName)
             {
                 ApplicationArea = All;
+                ToolTip = 'Executes the ActionName action.';
 
                 trigger OnAction()
                 begin

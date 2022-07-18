@@ -15,39 +15,47 @@ page 50105 "Home Page"
         {
             repeater(General)
             {
-                field("No."; "No.")
+                field("No."; Rec."No.")
                 {
 
                     ApplicationArea = All;
-                    //ToolTip = ''
+                    ToolTip = 'Specifies vehicle no.';
 
                 }
-                field("Description"; "Description")
+                field("Description"; Rec."Description")
                 {
                     ApplicationArea = All;
+                    ToolTip = 'Specifies a description of the vehicle';
+
 
                 }
-                field("Search Description"; "Search Description")
+                field("Search Description"; Rec."Search Description")
                 {
                     ApplicationArea = All;
+                    ToolTip = 'Specifies search description of the vehicle.';
+
 
                 }
-                field("Vehicle Group Code"; "Vehicle Group Code")
+                field("Vehicle Group Code"; Rec."Vehicle Group Code")
                 {
                     ApplicationArea = All;
+                    ToolTip = 'Specifies group code of the vehicle.';
+
 
                 }
-                field("Inventory"; "Inventory")
+                field("Inventory"; Rec."Inventory")
                 {
                     ApplicationArea = All;
                     Editable = false;
+                    ToolTip = 'Specifies how many vehicles in inventory.';
+
 
                 }
-                field("Net Change"; "Net Change")
+                field("Net Change"; Rec."Net Change")
                 {
                     ApplicationArea = All;
                     Editable = false;
-
+                    ToolTip = 'Specifies net change in the inventory during the time period with date filter.';
                 }
             }
         }
@@ -60,6 +68,7 @@ page 50105 "Home Page"
             action(ActionName)
             {
                 ApplicationArea = All;
+                ToolTip = 'Executes the ActionName action.';
 
                 trigger OnAction()
                 begin
@@ -78,6 +87,6 @@ page 50105 "Home Page"
     begin
         fromDate := 20220722D;
         toDate := 20220725D;
-        SetFilter("Net Change Date", '%1 .. %2', fromDate, toDate);
+        Rec.SetFilter("Net Change Date", '%1 .. %2', fromDate, toDate);
     end;
 }
