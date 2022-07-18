@@ -1,12 +1,12 @@
-page 50122 "CarList"
+page 50122 "Vehicle List"
 {
     PageType = List;
     ApplicationArea = All;
     UsageCategory = Lists;
-    SourceTable = CarList;
+    SourceTable = "Vehicle List";
     Editable = false;
-    CardPageId = "CarListCardPage";
-    Caption = 'Arac Listesi';
+    CardPageId = "Vehicle Card Page";
+    Caption = 'Car List';
 
     layout
     {
@@ -19,41 +19,42 @@ page 50122 "CarList"
                     ApplicationArea = All;
 
                 }
-                field("Aciklama"; "Aciklama")
+                field("Description"; "Description")
                 {
                     ApplicationArea = All;
 
                 }
-                field("Aciklama2"; "Aciklama2")
+                field("Description2"; "Description2")
                 {
                     ApplicationArea = All;
 
                 }
-                field("Arama Aciklamasi"; "Arama Aciklamasi")
+                field("Search Description"; "Search Description")
                 {
                     ApplicationArea = All;
 
                 }
-                field("Arac Grubu Kodu"; "Arac Grubu Kodu")
+                field("Vehicle Group Code"; "Vehicle Group Code")
                 {
                     ApplicationArea = All;
 
                 }
-                field("Stok"; "Stok")
+                field("Inventory"; "Inventory")
                 {
                     ApplicationArea = All;
 
                 }
-                field("Net Degisim"; "Net Degisim")
+                field("Net Change"; "Net Change")
                 {
                     ApplicationArea = All;
 
                 }
-                field("Satinalma Miktari"; "Satinalma Miktari")
+                field("Purchase Amount"; "Purchase Amount")
                 {
                     ApplicationArea = All;
 
                 }
+
             }
         }
     }
@@ -74,6 +75,5 @@ page 50122 "CarList"
         }
     }
 
-    var
-        myInt: Integer;
+
 }

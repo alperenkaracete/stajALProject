@@ -1,23 +1,22 @@
-page 50123 "Arac Gruplari"
+page 50123 "Vehicle Groups"
 {
     PageType = List;
     ApplicationArea = All;
     UsageCategory = Lists;
-    SourceTable = "Arac Gruplari";
-    CardPageId = "AracGruplariCard";
+    SourceTable = "Vehicle Groups";
 
     layout
     {
         area(Content)
         {
-            repeater("Arac Gruplari")
+            repeater("Vehicle Groups")
             {
-                field("Kod"; "Kod")
+                field("Code"; "Code")
                 {
                     ApplicationArea = All;
 
                 }
-                field("Aciklama"; "Aciklama")
+                field("Description"; "Description")
                 {
                     ApplicationArea = All;
 

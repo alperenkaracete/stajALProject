@@ -1,53 +1,54 @@
-page 50121 "CarListCardPage"
+page 50121 "Vehicle Card Page"
 {
     PageType = Card;
     UsageCategory = None;
-    SourceTable = CarList;
-    Caption = 'Car Card Page';
+    SourceTable = "Vehicle List";
+    Caption = 'Vehicle Card Page';
 
     layout
     {
         area(Content)
         {
-            group(General)
+            group(Information)
             {
                 field("No."; "No.")
                 {
                     ApplicationArea = All;
 
+
                 }
-                field("Aciklama"; "Aciklama")
+                field("Description"; "Description")
                 {
                     ApplicationArea = All;
 
                 }
-                field("Aciklama2"; "Aciklama2")
+                field("Description2"; "Description2")
                 {
                     ApplicationArea = All;
 
                 }
-                field("Arama Aciklamasi"; "Arama Aciklamasi")
+                field("Search Description"; "Search Description")
                 {
                     ApplicationArea = All;
 
                 }
-                field("Arac Grubu Kodu"; "Arac Grubu Kodu")
+                field("Car Group Code"; "Vehicle Group Code")
                 {
                     ApplicationArea = All;
 
 
                 }
-                field("Stok"; "Stok")
+                field("Stock"; "Inventory")
                 {
                     ApplicationArea = All;
 
                 }
-                field("Net Degisim"; "Net Degisim")
+                field("Total Change"; "Net Change")
                 {
                     ApplicationArea = All;
 
                 }
-                field("Satinalma Miktari"; "Satinalma Miktari")
+                field("Buy Amount"; "Purchase Amount")
                 {
                     ApplicationArea = All;
 
@@ -60,16 +61,7 @@ page 50121 "CarListCardPage"
     {
         area(Processing)
         {
-            action("Goruntule Arac Kart")
-            {
-                ApplicationArea = All;
 
-                RunObject = Page "CarList";
-                RunPageLink = "No." = field("No.");
-                Image = Relationship;
-                Promoted = true;
-                PromotedCategory = Process;
-            }
         }
     }
 

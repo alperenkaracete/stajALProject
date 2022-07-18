@@ -1,89 +1,96 @@
-page 50126 "AracDeftereGirisleriCard"
+page 50126 "Vehicle Ledger Entry"
 {
-    PageType = Card;
-    UsageCategory = None;
-    SourceTable = "Arac Deftere Girisleri";
-    Caption = 'Arac Deftere Giris Kart Page';
+    PageType = List;
+    UsageCategory = Lists;
+    SourceTable = "Vehicle Ledger Entry";
+    Caption = 'Vehicle Record Entries';
+    ApplicationArea = All;
+    Editable = true;
 
     layout
     {
         area(Content)
         {
-            group(GroupName)
+            repeater(GroupName)
             {
-                field("Araç No"; "Araç No")
+                field("No."; "No.")
+                {
+                    ApplicationArea = All;
+                    Caption = 'Reward Level';
+                    Description = 'Reward level of the customer.';
+                    ToolTip = 'Specifies the level of reward that the customer has at this point.';
+
+                }
+                field("Posting Date"; "Posting Date")
                 {
                     ApplicationArea = All;
 
                 }
-                field("Deftere Nakil Tarihi"; "Deftere Nakil Tarihi")
+                field("Document Date"; "Document Date")
                 {
                     ApplicationArea = All;
 
                 }
-                field("Belge Tarihi"; "Belge Tarihi")
+                field("Entry Type"; "Entry Type")
                 {
                     ApplicationArea = All;
 
                 }
-                field("Giriş Türü"; "Giris Turu")
+                field("Document No"; "Document No.")
                 {
                     ApplicationArea = All;
 
                 }
-                field("Belge No"; "Belge No")
+                field("External Document No"; "External Document No.")
                 {
                     ApplicationArea = All;
 
                 }
-                field("Harici Belge No"; "Harici Belge No")
+                field("Source Type"; "Source Type")
                 {
                     ApplicationArea = All;
 
                 }
-                field("Kaynak Türü"; "Kaynak Türü")
+                field("Source No"; "Source No.")
                 {
                     ApplicationArea = All;
 
                 }
-                field("Kaynak No"; "Kaynak No")
+                field("Description"; "Description")
                 {
                     ApplicationArea = All;
 
                 }
-                field("Aciklama"; "Aciklama")
+                field("Amount"; "Amount")
                 {
                     ApplicationArea = All;
 
                 }
-                field("Miktar"; "Miktar")
+                field("Positive"; "Positive")
                 {
                     ApplicationArea = All;
 
                 }
-                field("Pozitif"; "Pozitif")
+                field("No. Series"; "No. Series")
                 {
                     ApplicationArea = All;
 
                 }
-                field("Numara Serisi"; "Numara Serisi")
+                field("Document Line No."; "Document Line No.")
                 {
                     ApplicationArea = All;
 
                 }
-                field("Belge Satir No"; "Belge Satir No")
+                field("Vehicle Description"; "Vehicle Description")
                 {
                     ApplicationArea = All;
 
                 }
-                field("Arac Aciklamasi"; "Arac Aciklamasi")
+                field("Entry No."; "Entry No.")
                 {
                     ApplicationArea = All;
-
-                }
-                field("Giris No"; "Giris No")
-                {
-                    ApplicationArea = All;
+                    NotBlank = true;
+                    ToolTip = 'Select a Vehicle please this place will automaticly uptated!';
 
                 }
             }
@@ -106,6 +113,4 @@ page 50126 "AracDeftereGirisleriCard"
         }
     }
 
-    var
-        myInt: Integer;
 }

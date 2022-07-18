@@ -1,13 +1,13 @@
-page 50105 "HomePage"
+page 50105 "Home Page"
 {
     PageType = List;
     ApplicationArea = All;
     UsageCategory = Lists;
-    SourceTable = CarList;
-    Description = 'Anasayfa';
+    SourceTable = "Vehicle List";
+    Description = 'Home Page';
     Editable = true;
-    CardPageId = CarListCardPage;
-    Caption = 'Anasayfa';
+    CardPageId = "Vehicle Card Page";
+    Caption = 'Home Page';
 
     layout
     {
@@ -15,33 +15,35 @@ page 50105 "HomePage"
         {
             repeater(General)
             {
-                field("No"; "No.")
+                field("No."; "No.")
+                {
+
+                    ApplicationArea = All;
+                    //ToolTip = ''
+
+                }
+                field("Description"; "Description")
                 {
                     ApplicationArea = All;
 
                 }
-                field("Aciklama"; "Aciklama")
+                field("Search Description"; "Search Description")
                 {
                     ApplicationArea = All;
 
                 }
-                field("Arama Aciklamasi"; "Arama Aciklamasi")
+                field("Vehicle Group Code"; "Vehicle Group Code")
                 {
                     ApplicationArea = All;
 
                 }
-                field("Arac Grubu Kodu"; "Arac Grubu Kodu")
-                {
-                    ApplicationArea = All;
-
-                }
-                field("Stok"; "Stok")
+                field("Inventory"; "Inventory")
                 {
                     ApplicationArea = All;
                     Editable = false;
 
                 }
-                field("Net Degisim"; "Net Degisim")
+                field("Net Change"; "Net Change")
                 {
                     ApplicationArea = All;
                     Editable = false;
@@ -67,6 +69,15 @@ page 50105 "HomePage"
         }
     }
 
+    trigger OnOpenPage()
+
     var
-        myInt: Integer;
+        fromDate,
+    toDate : Date;
+
+    begin
+        fromDate := 20220722D;
+        toDate := 20220725D;
+        SetFilter("Net Change Date", '%1 .. %2', fromDate, toDate);
+    end;
 }
